@@ -1,0 +1,11 @@
+﻿<Application x:Class="XMLparsing.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:XMLparsing"
+             xmlns:VM="clr-namespace:XMLParsing.ViewModels"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <VM:MainWindowViewModel x:Name="MainWindowViewModel" x:Key="MainWindowViewModel" />
+    </Application.Resources>
+</Application>
+
