@@ -17,8 +17,6 @@
                 Storyboard.TargetProperty="(TextBlock.Opacity)" 
                 From="1" To="0" Duration="0:0:10" />
         </Storyboard>
-        <!--<ResourceDictionary x:Key="UIMessage"
-            Source="Dictionary1.xaml" />-->
     </Window.Resources>
 
   
@@ -90,8 +88,7 @@
                 </Border>
             </Grid>
         </Border>
-        <TextBlock x:Name="UIMessage" Text="" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,8,0" Foreground ="Red"/>
-        <!--<TextBlock x:Name="UIMessage" Text="" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,8,0" Foreground="{StaticResource DarkBrightBrush}"/>-->
+        <TextBlock x:Name="UIMessage" Text="" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,8,0" Foreground="{StaticResource DarkBrightBrush}"/>
         <Frame x:Name="EditFrame" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"  NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

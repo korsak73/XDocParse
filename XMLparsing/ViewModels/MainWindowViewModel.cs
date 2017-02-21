@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Collections.ObjectModel;
 using System.Windows;
 using Microsoft.Win32;
+using System.Threading.Tasks;
 
 namespace XMLParsing.ViewModels
 {
@@ -56,12 +57,27 @@ namespace XMLParsing.ViewModels
             }
         }
 
+        //private async void  ImportItemsAsync()
+        //{
+        //    try
+        //    {
+        //        OpenFileDialog Fd = new OpenFileDialog();
+        //        Fd.ShowDialog();
+        //        string LoadedFileName = Fd.FileName;
+        //        CartObject = await XMLParsers.ImportItemsAsync(LoadedFileName);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
+
         public RelayCommand CreateXMLDocumentCommand { get; private set; }
-        private void CreateXMLDocument()
+        private async void CreateXMLDocument()
         {
             //19058817
             long id = cart.Header.SessionID;
-            XMLParsers.CreateXMLDocument(id);
+            await XMLParsers.CreateXMLDocumentAsync(id);
         }
 
         private void WireCommands()

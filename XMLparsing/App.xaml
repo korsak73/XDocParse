@@ -5,7 +5,8 @@
              xmlns:VM="clr-namespace:XMLParsing.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <VM:MainWindowViewModel x:Name="MainWindowViewModel" x:Key="MainWindowViewModel" />
+        <ResourceDictionary
+            Source="Dictionary1.xaml" />
     </Application.Resources>
 </Application>
 
