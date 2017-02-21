@@ -76,9 +76,6 @@
     <Content Include="Sample.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Student.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
