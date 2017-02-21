@@ -52,12 +52,12 @@
                     <TextBox IsEnabled="{Binding Path=IsNameEnabled}" 
                              Name="tbSessionID" 
                              Text="{Binding Path=CartObject.Header.SessionID, Mode=TwoWay}"
-                             Margin="5, 0, 0, 0" 
+                             Margin="5, 0, 5, 0" 
                              Foreground="Green" 
                              Width="150"/>
-                    <Button Content="Parse XML with XDocument"
+                    <Button Content="Load XML Document"
                             Command="{Binding Path=ImportItemsCommand}"
-                            Margin="0, 0, 5, 0" />
+                            Margin="0, 0, 5, 0"/>
                     <Button Content="Clear result"
                             Command="{Binding Path=ClearResultCommand}" />
                 </StackPanel>

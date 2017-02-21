@@ -15,7 +15,6 @@ namespace XMLParsing.Models
 {
     public static class XMLParsers
     {
-        //private static string xmlUrl = "http://localhost:7467/Student.xml";
         private static string xmlUrl = "http://localhost:7467/Sample.xml";
 
         //public static ObservableCollection<Item> _Items { get; set; }
@@ -83,36 +82,6 @@ namespace XMLParsing.Models
         //    return students;
         //}
 
-        //public static Cart ParseCartXDocument()
-        //{
-        //    var cart = new Cart();
-
-        //    XDocument doc = XDocument.Load(xmlUrl2);
-        //    XElement generalElement = doc
-        //            .Element("Cart");
-        //    cart.Version = generalElement.Element("Version").Value;
-        //    cart.Description = generalElement.Element("Description").Value;
-
-        //    //cart.Header = generalElement.Element("Header").Value;
-        //    cart.ItemList = (from c in doc.Descendants("Item")
-        //                     select new Item()
-        //                     {
-
-        //                     }).ToList<Item>();
-        //    //cart.School = generalElement.Element("School").Value;
-
-        //                        //students.Studentlist = (from c in doc.Descendants("Student")
-        //                        //                        select new Student()
-        //                        //                        {
-        //                        //                            id = Convert.ToInt16(c.Attribute("id").Value),
-        //                        //                            name = c.Value,
-        //                        //                            score = Convert.ToInt16(c.Attribute("score").Value),
-        //                        //                            enrollment = c.Attribute("enrollment").Value,
-        //                        //                            comment = c.Attribute("comment").Value
-        //                        //                        }).ToList<Student>();
-
-        //    return cart;
-        //}
         public static void CreateXMLDocument(long sessionID)
         {
             using (XDocContext db = new XDocContext())
@@ -175,12 +144,13 @@ namespace XMLParsing.Models
 
 
         }
-        public static Cart ImportItems()
+        public static Cart ImportItems(string path)
         {
             using (XDocContext db = new XDocContext())
             {
                 UserMessage msg = new UserMessage();
-                XDocument xdoc = XDocument.Load(xmlUrl);
+                //XDocument xdoc = XDocument.Load(xmlUrl);
+                XDocument xdoc = XDocument.Load(path);
                 Cart cart = new Cart();
                 Header head = new Header();
                 bool query = false;

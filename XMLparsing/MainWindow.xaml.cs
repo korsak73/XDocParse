@@ -15,7 +15,9 @@ using System.Windows.Shapes;
 using GalaSoft.MvvmLight.Messaging;
 using System.Windows.Media.Animation;
 using XMLParsing.ViewModels;
+using XMLParsing.Models;
 using XMLParsing;
+using Microsoft.Win32;
 
 namespace XMLparsing
 {
@@ -24,6 +26,7 @@ namespace XMLparsing
     /// </summary>
     public partial class MainWindow : Window
     {
+        string LoadedFileName = string.Empty;
         public MainWindow()
         {
             InitializeComponent();
@@ -51,19 +54,5 @@ namespace XMLparsing
                 e.Cancel = true;
             }
         }
-
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var dialog = new MyDialog();
-        //    dialog.Show();
-        //    string inputID = dialog.InputText;
-        //    //dialog.Closing += (sender, e) =>
-        //    //{
-        //    //    var d = sender as MyDialog;
-        //    //    if (!d.Canceled)
-        //    //        MessageBox.Show(d.InputText);
-        //    //};
-        //    long id = Convert.ToInt64(inputID);
-        //}
     }
 }

@@ -13,7 +13,6 @@ namespace XMLParsing.MVVMUtilities
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        //protected void NotifyPropertyChanged(string propertyName)
         protected void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             if (PropertyChanged != null)
@@ -22,13 +21,6 @@ namespace XMLParsing.MVVMUtilities
             }
         }
     }
-    //public void RaisePropertyChanged([CallerMemberName] String propertyName = "")
-    //{
-    //    if (PropertyChanged != null)
-    //    {
-    //        PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-    //    }
-    //}
 
     public class RelayCommand : ICommand
     {
